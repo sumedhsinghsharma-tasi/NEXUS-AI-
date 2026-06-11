@@ -6,26 +6,36 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 4%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 4%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 4%;
-    --primary: 0 0% 4%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 4%;
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 35%;
-    --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 4%;
-    --destructive: 0 70% 45%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 4%;
+    --background: 35 38% 90%;
+    --foreground: 22 30% 12%;
+    --card: 36 45% 94%;
+    --card-foreground: 22 30% 12%;
+    --popover: 36 45% 94%;
+    --popover-foreground: 22 30% 12%;
+    --primary: 22 30% 12%;
+    --primary-foreground: 36 45% 96%;
+    --secondary: 35 35% 86%;
+    --secondary-foreground: 22 30% 12%;
+    --muted: 35 30% 84%;
+    --muted-foreground: 25 18% 38%;
+    --accent: 18 55% 60%;
+    --accent-foreground: 36 45% 96%;
+    --destructive: 8 70% 42%;
+    --destructive-foreground: 36 45% 96%;
+    --border: 30 22% 76%;
+    --input: 30 22% 76%;
+    --ring: 22 30% 12%;
     --radius: 0.25rem;
+
+    --sand-50: #FBF5E8;
+    --sand-100: #F4EAD3;
+    --sand-200: #E9DCC0;
+    --sand-300: #D9C5A0;
+    --sand-400: #C4A87C;
+    --terra-500: #B96A47;
+    --terra-700: #7E3F22;
+    --ink: #1A140E;
+    --ink-soft: #4A3B2C;
   }
 }
 
@@ -68,7 +78,7 @@
 .ticker-dot {
   width: 8px;
   height: 8px;
-  background: #050505;
+  background: var(--terra-500);
   display: inline-block;
 }
 
@@ -80,6 +90,9 @@
   animation: pulse-dot 1.6s ease-in-out infinite;
 }
 
+.insight-prose {
+  color: var(--ink-soft);
+}
 .insight-prose h1,
 .insight-prose h2,
 .insight-prose h3 {
@@ -89,6 +102,7 @@
   margin-top: 1.25rem;
   margin-bottom: 0.5rem;
   font-size: 1.05rem;
+  color: var(--ink);
 }
 .insight-prose p {
   margin-bottom: 0.75rem;
@@ -96,7 +110,7 @@
 }
 .insight-prose strong {
   font-weight: 700;
-  color: #050505;
+  color: var(--ink);
 }
 .insight-prose ul {
   list-style: none;
@@ -116,7 +130,7 @@
   top: 0.65rem;
   width: 0.55rem;
   height: 1px;
-  background: #050505;
+  background: var(--terra-500);
 }
 .insight-prose ol {
   list-style: none;
@@ -139,12 +153,12 @@
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.05em;
-  color: #050505;
+  color: var(--terra-500);
 }
 
 ::selection {
-  background: #050505;
-  color: #ffffff;
+  background: var(--ink);
+  color: var(--sand-50);
 }
 
 @media (prefers-reduced-motion: reduce) {

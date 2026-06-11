@@ -31,24 +31,24 @@ export default function Founders() {
   }, []);
 
   return (
-    <main data-testid={FOUNDERS.page} className="min-h-screen bg-white">
+    <main data-testid={FOUNDERS.page} className="min-h-screen bg-[#F2E8D5]">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 pt-16 lg:pt-24 pb-24">
         {/* Header */}
         <div className="grid grid-cols-12 gap-8 mb-16 lg:mb-24">
           <div className="col-span-12 lg:col-span-8">
-            <div className="overline text-neutral-500 mb-6">
+            <div className="overline text-[#8A7660] mb-6">
               Index · 02 / Founders Routed by AI Engine
             </div>
-            <h1 className="font-display font-black tracking-tighter text-5xl sm:text-6xl lg:text-[5rem] leading-[0.92] text-neutral-950">
+            <h1 className="font-display font-black tracking-tighter text-5xl sm:text-6xl lg:text-[5rem] leading-[0.92] text-[#1A140E]">
               The Founders<br />
-              <span className="italic font-light">Index.</span>
+              <span className="italic font-light text-[#7E3F22]">Index.</span>
             </h1>
           </div>
           <div className="col-span-12 lg:col-span-4 flex lg:justify-end items-end">
             <Link
               to="/"
               data-testid={FOUNDERS.backLink}
-              className="border border-neutral-950 px-6 py-4 hover:bg-neutral-950 hover:text-white transition-colors overline"
+              className="border border-[#1A140E] px-6 py-4 hover:bg-[#1A140E] hover:text-[#FBF5E8] transition-colors overline"
             >
               + Add Founder
             </Link>
@@ -56,16 +56,16 @@ export default function Founders() {
         </div>
 
         {/* Stats bar */}
-        <div className="border-t border-b border-neutral-950 py-5 mb-0 grid grid-cols-3 gap-4">
+        <div className="border-t border-b border-[#1A140E] py-5 mb-0 grid grid-cols-3 gap-4 bg-[#EADFC8]">
           <Stat label="Total founders" value={String(founders.length).padStart(3, "0")} />
           <Stat label="AI engine" value="Claude Sonnet 4.5" />
           <Stat label="Jurisdiction" value="UAE · PDPL Compliant" />
         </div>
 
         {/* List */}
-        <div data-testid={FOUNDERS.list} className="border-b border-neutral-950">
+        <div data-testid={FOUNDERS.list} className="border-b border-[#1A140E] bg-[#FAF3E2]">
           {loading ? (
-            <div className="py-24 flex items-center justify-center text-neutral-500 gap-3">
+            <div className="py-24 flex items-center justify-center text-[#8A7660] gap-3">
               <Loader2 className="h-4 w-4 animate-spin" />
               <span className="overline">Loading index…</span>
             </div>
@@ -74,16 +74,16 @@ export default function Founders() {
               data-testid={FOUNDERS.empty}
               className="py-24 text-center"
             >
-              <p className="font-display text-2xl tracking-tight text-neutral-950 mb-3">
+              <p className="font-display text-2xl tracking-tight text-[#1A140E] mb-3">
                 No founders routed yet.
               </p>
-              <p className="text-sm text-neutral-500 mb-8">
+              <p className="text-sm text-[#8A7660] mb-8">
                 Be the first signal through the engine.
               </p>
               <Link
                 to="/"
                 data-testid={ONBOARDING.submitBtn + "-empty"}
-                className="inline-block bg-neutral-950 text-white px-8 py-4 hover:bg-neutral-800 transition-colors overline"
+                className="inline-block bg-[#1A140E] text-[#FBF5E8] px-8 py-4 hover:bg-[#7E3F22] transition-colors overline"
               >
                 Start Onboarding →
               </Link>
@@ -107,9 +107,9 @@ export default function Founders() {
 
 function Stat({ label, value }) {
   return (
-    <div>
-      <div className="overline text-neutral-500 mb-1.5">{label}</div>
-      <div className="font-mono-grid text-sm sm:text-base text-neutral-950">
+    <div className="px-4">
+      <div className="overline text-[#8A7660] mb-1.5">{label}</div>
+      <div className="font-mono-grid text-sm sm:text-base text-[#1A140E]">
         {value}
       </div>
     </div>
@@ -125,27 +125,27 @@ function FounderRow({ founder, index, open, onToggle }) {
   });
 
   return (
-    <article data-testid={FOUNDERS.card} className="border-t border-neutral-200">
+    <article data-testid={FOUNDERS.card} className="border-t border-[#D9C5A0]">
       <button
         onClick={onToggle}
-        className="w-full grid grid-cols-12 gap-4 py-8 px-2 sm:px-4 text-left hover:bg-neutral-50 transition-colors items-baseline"
+        className="w-full grid grid-cols-12 gap-4 py-8 px-2 sm:px-4 text-left hover:bg-[#F4EAD3] transition-colors items-baseline"
       >
-        <div className="col-span-2 sm:col-span-1 font-mono-grid text-xs text-neutral-400">
+        <div className="col-span-2 sm:col-span-1 font-mono-grid text-xs text-[#B96A47]">
           {String(index).padStart(3, "0")}
         </div>
         <div className="col-span-10 sm:col-span-4">
-          <div className="font-display font-black tracking-tighter text-2xl sm:text-3xl text-neutral-950">
+          <div className="font-display font-black tracking-tighter text-2xl sm:text-3xl text-[#1A140E]">
             {founder.name}
           </div>
         </div>
-        <div className="col-span-8 sm:col-span-5 text-sm text-neutral-600 line-clamp-2">
+        <div className="col-span-8 sm:col-span-5 text-sm text-[#5C4A36] line-clamp-2">
           {founder.skills}
         </div>
-        <div className="col-span-4 sm:col-span-2 flex items-center justify-end gap-2 font-mono-grid text-xs text-neutral-500">
+        <div className="col-span-4 sm:col-span-2 flex items-center justify-end gap-2 font-mono-grid text-xs text-[#8A7660]">
           {dateStr}
           <ArrowUpRight
             className={`h-4 w-4 transition-transform ${
-              open ? "rotate-45" : ""
+              open ? "rotate-45 text-[#7E3F22]" : ""
             }`}
           />
         </div>
@@ -157,8 +157,8 @@ function FounderRow({ founder, index, open, onToggle }) {
             <Block label="Skills" body={founder.skills} />
             <Block label="Wants to learn" body={founder.learning_goals} />
           </div>
-          <div className="col-span-12 sm:col-span-6 border-l border-neutral-200 sm:pl-8">
-            <div className="overline text-neutral-500 mb-4">
+          <div className="col-span-12 sm:col-span-6 border-l border-[#D9C5A0] sm:pl-8">
+            <div className="overline text-[#8A7660] mb-4">
               AI Engine Briefing
             </div>
             <Markdown text={founder.ai_insight} />
@@ -172,8 +172,8 @@ function FounderRow({ founder, index, open, onToggle }) {
 function Block({ label, body }) {
   return (
     <div>
-      <div className="overline text-neutral-500 mb-2">{label}</div>
-      <p className="text-[15px] leading-relaxed text-neutral-800">{body}</p>
+      <div className="overline text-[#8A7660] mb-2">{label}</div>
+      <p className="text-[15px] leading-relaxed text-[#3A2F22]">{body}</p>
     </div>
   );
 }

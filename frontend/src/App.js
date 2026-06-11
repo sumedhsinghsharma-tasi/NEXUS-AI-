@@ -7,15 +7,15 @@ import Founders from "@/pages/Founders";
 
 function Layout({ children }) {
   return (
-    <div className="min-h-screen bg-white text-neutral-950">
+    <div className="min-h-screen bg-[#F2E8D5] text-[#1A140E]">
       <BrandHeader />
       {children}
-      <footer className="border-t border-neutral-200">
+      <footer className="border-t border-[#D9C5A0]/70 bg-[#EADFC8]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <span className="overline text-neutral-500">
+          <span className="overline text-[#7A6A55]">
             © 2026 NEXUS AI COMMUNITY HUB · UAE
           </span>
-          <span className="overline text-neutral-500">
+          <span className="overline text-[#7A6A55]">
             Engine · Claude Sonnet 4.5 · PDPL Compliant
           </span>
         </div>
