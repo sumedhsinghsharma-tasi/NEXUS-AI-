@@ -1,0 +1,92 @@
+{
+  "theme_and_archetype": {
+    "domain": "AI-driven community platform onboarding screen",
+    "theme": "LIGHT",
+    "archetype": "4 (Swiss & High-Contrast)",
+    "vibe": "Authority, clarity, modern, function-first, precise"
+  },
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "Inter",
+    "fallback_heading": "Cabinet Grotesk",
+    "fallback_body": "IBM Plex Sans",
+    "rules": [
+      "No Inter or generic sans for headings.",
+      "Headlines (Size > 32px) MUST use tracking-tighter.",
+      "Variable weights: use font-light or font-black to break standard bold/regular binary.",
+      "Overlines / Labels MUST be Uppercase, text-xs, wide spacing (tracking-[0.2em])."
+    ]
+  },
+  "color_system": {
+    "background": "#FFFFFF",
+    "foreground": "#050505",
+    "primary_accent": "#0A0A0A",
+    "secondary_accent": "#F5F5F5",
+    "surface": "#FFFFFF",
+    "borders": "#E5E5E5",
+    "rules": [
+      "95% of UI should be monochrome. Color exists only to guide action.",
+      "Never use pure black #000000 or #808080. Tint greys slightly.",
+      "High contrast text ONLY. Never gray-on-gray.",
+      "Focus states MUST have HIGHER contrast."
+    ]
+  },
+  "layout_and_spacing": {
+    "spacing_scale": "p-4, p-8, p-12, p-16, p-24",
+    "generous_spacing_philosophy": "Use 2-3x more spacing than typical designs.",
+    "grid_strategy": "The Swiss Grid: strict grid hierarchy, dense and compact spacing for data, but massive white space around the form container.",
+    "alignment": "Optical Alignment over geometrical. Left-align dense content.",
+    "borders_and_radius": "Sharp edges or max 4px border-radius. Crisp edges via semi-transparent borders + shadows."
+  },
+  "components": {
+    "buttons": {
+      "primary": "Large, prominent 'Submit to AI Engine', absolute Pitch Black background (bg-primary), text-primary-foreground, minimal hover effect (-translate-y-1), crisp edges.",
+      "style": "Flat solid surfaces. No gradients."
+    },
+    "inputs": {
+      "style": "Shadcn components, customized with sharp corners, 1px subtle border, large hit areas (h-12 or h-14), clean typography."
+    },
+    "checkbox": {
+      "style": "Active checkbox for UAE data privacy consent. Sharp square, high contrast checkmark."
+    },
+    "cards_and_surfaces": {
+      "style": "Grid Borders: expose the skeleton. border-collapse style layout for the founders list."
+    }
+  },
+  "motion_and_interactions": {
+    "hover_states": "Crisp, fast, subtle lift or border color darken.",
+    "focus_states": "High contrast ring focus.",
+    "accessibility": "Respect prefers-reduced-motion."
+  },
+  "testing": {
+    "requirements": "All interactive and key informational elements MUST include a data-testid attribute in kebab-case."
+  },
+  "media_and_assets": {
+    "icons": "lucide-react (sharp, minimal lines)",
+    "images": [
+      {
+        "url": "https://images.pexels.com/photos/28506788/pexels-photo-28506788.jpeg",
+        "category": "Hero/Background",
+        "description": "Minimalist white architecture for subtle layout backdrop."
+      },
+      {
+        "url": "https://images.pexels.com/photos/19747906/pexels-photo-19747906.jpeg",
+        "category": "Founder Avatar 1",
+        "description": "Professional founder portrait for the list."
+      },
+      {
+        "url": "https://images.pexels.com/photos/37828831/pexels-photo-37828831.jpeg",
+        "category": "Founder Avatar 2",
+        "description": "Professional founder portrait for the list."
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Build a single-page app structure: Onboarding Form + Founders List Page.",
+    "Form must include Name, Skills, Learning Goals (Text/Textarea) and UAE data privacy checkbox.",
+    "CTA must be large and prominent.",
+    "Integrate a mock or actual Claude AI call when submitted to generate a personalized welcome/learning roadmap.",
+    "The Founder List should display submissions with AI insights in a brutalist, clean grid or table format.",
+    "Use data-testid on every interactive element."
+  ]
+}
