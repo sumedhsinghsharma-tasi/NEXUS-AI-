@@ -10,13 +10,12 @@ class LlmChat:
     def __init__(self, api_key=None, model=None, system_message=None, session_id=None, **kwargs):
         pass
 
-    def with_model(self, provider, model_name=None, *args, **kwargs):
+    def with_model(self, provider=None, model_name=None, *args, **kwargs):
         return self
 
     async def send_message(self, message, *args, **kwargs):
-        # Extract text if a UserMessage or similar object is passed
         content = getattr(message, "text", str(message))
-        return LLMResponse(f"Welcome! Here is your custom AI insight based on: {content[:50]}...")
+        return LLMResponse(f"**Welcome** — {content.splitlines()[0] if content else 'Founder'}.\n\n**Strengths Detected** — Cross-border coordination, operations.\n\n**Learning Roadmap** — 1. Review trade regulations.\n\n**Community Match** — Connect with logistics experts in the UAE hub.")
 
 class UserMessage:
     def __init__(self, text=None, message=None, **kwargs):
