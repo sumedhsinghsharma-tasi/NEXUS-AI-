@@ -2,7 +2,7 @@ class LlmChat:
     def __init__(self, api_key=None, model=None, system_message=None, session_id=None, **kwargs):
         pass
 
-    def with_model(self, model):
+    def with_model(self, model, *args, **kwargs):
         return self
 
     def send_message(self, message: str):
