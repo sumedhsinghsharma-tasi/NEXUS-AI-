@@ -5,8 +5,8 @@ class LlmChat:
     def with_model(self, model, *args, **kwargs):
         return self
 
-    def send_message(self, message: str):
-        pass
+    async def send_message(self, message: str, *args, **kwargs):
+        return "Mock response"
 
 class UserMessage:
     def __init__(self, message=None, **kwargs):
