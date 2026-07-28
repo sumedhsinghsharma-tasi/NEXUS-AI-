@@ -5,7 +5,7 @@ import { FOUNDERS, ONBOARDING } from "@/constants/testIds";
 import { Markdown } from "@/components/Markdown";
 import { Loader2, ArrowUpRight } from "lucide-react";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
 export default function Founders() {
