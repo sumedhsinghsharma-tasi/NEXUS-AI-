@@ -8,4 +8,6 @@ class LlmChat:
     def send_message(self, message: str):
         pass
 
-
+class UserMessage:
+    def __init__(self, message=None, **kwargs):
+        pass
